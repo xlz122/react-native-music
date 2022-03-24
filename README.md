@@ -6,8 +6,8 @@
 
 ## 环境
 
-React 17.0.2
-React Native 0.67.4
+* React 17.0.2
+* React Native 0.67.4
 
 ## 简介
 
