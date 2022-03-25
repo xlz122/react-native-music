@@ -32,20 +32,25 @@
 ## 插件介绍
 
 状态管理
-redux redux-thunk react-redux
+* redux redux-thunk react-redux
 
 本地存储
-@react-native-async-storage/async-storage
+* @react-native-async-storage/async-storage
 
 路由
-@react-navigation/native
-@react-navigation/stack
-react-native-gesture-handler
-react-native-safe-area-context
-react-native-screens
+* @react-navigation/native
+* @react-navigation/stack
+* react-native-gesture-handler
+* react-native-safe-area-context
+* react-native-screens
 
 tab导航
-@react-navigation/bottom-tabs
+* @react-navigation/bottom-tabs
+
+轮播图
+* react-native-gesture-handler
+* react-native-reanimated
+* react-native-reanimated-carousel
 
 ## 加入项目
 
