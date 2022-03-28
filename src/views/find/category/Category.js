@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    marginTop: 12
+    marginTop: 13
   },
   item: {
     display: 'flex',
@@ -112,6 +112,7 @@ const styles = StyleSheet.create({
     height: 46
   },
   itemText: {
+    marginTop: 2,
     color: '#333',
     fontSize: 12
   }

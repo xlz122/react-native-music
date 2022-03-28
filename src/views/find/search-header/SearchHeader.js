@@ -36,7 +36,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    height: 63
+    height: 50,
+    marginBottom: 8
   },
   collapsed: {
     width: 52,

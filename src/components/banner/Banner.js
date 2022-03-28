@@ -67,7 +67,7 @@ function Banner() {
 const styles = StyleSheet.create({
   banner: {
     position: 'relative',
-    height: 150
+    height: 132
   },
   coverContainer: {
     paddingLeft: 16,
