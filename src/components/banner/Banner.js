@@ -21,11 +21,13 @@ function Banner() {
   }, []);
 
   const geeBannerImg = () => {
-    bannerImg().then((res) => {
-      if (res.code === 200 && res.banners.length > 0) {
-        setBanner({ ...banner, list: res.banners });
-      }
-    });
+    bannerImg()
+      .then((res) => {
+        if (res.code === 200 && res.banners.length > 0) {
+          setBanner({ ...banner, list: res.banners });
+        }
+      })
+      .catch(() => ({}));
   };
 
   const RenderItem = ({ item }) => {
@@ -51,7 +53,7 @@ function Banner() {
         renderItem={({ item }) => <RenderItem item={item} />}
         loop={true}
         autoPlay={true}
-        autoPlayInterval={10000}
+        autoPlayInterval={6000}
         onProgressChange={(_, absoluteProgress) =>
           (progressValue.value = absoluteProgress)
         }
@@ -67,7 +69,7 @@ function Banner() {
 const styles = StyleSheet.create({
   banner: {
     position: 'relative',
-    height: 132
+    height: 130
   },
   coverContainer: {
     paddingLeft: 16,

@@ -4,6 +4,7 @@ import LinearGradinet from 'react-native-linear-gradient';
 import SearchHeader from './search-header/SearchHeader';
 import Banner from '../../components/banner/Banner';
 import Category from './category/Category';
+import SongSheet from './song-sheet/SongSheet';
 
 function Find() {
   return (
@@ -17,6 +18,10 @@ function Find() {
           <Category />
         </LinearGradinet>
         <View style={styles.line}></View>
+        <SongSheet />
+      </View>
+      <View style={[styles.group]}>
+        <View style={{ height: 50 }}></View>
       </View>
     </View>
   );
@@ -30,13 +35,13 @@ const styles = StyleSheet.create({
   },
   group: {
     paddingBottom: 10,
+    marginBottom: 8,
     backgroundColor: '#fff',
     borderRadius: 12
   },
   line: {
     height: 0.3,
     marginTop: 13,
-    marginBottom: 5,
     backgroundColor: '#cfcfcf'
   }
 });

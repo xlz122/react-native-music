@@ -1,11 +1,11 @@
 import React from 'react';
 import {
-  SafeAreaView,
   View,
   Text,
   Image,
-  FlatList,
   StyleSheet,
+  SafeAreaView,
+  FlatList,
   TouchableOpacity
 } from 'react-native';
 
@@ -77,7 +77,7 @@ const Category = () => {
   );
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.list}>
       <FlatList
         horizontal
         initialNumToRender={6}
@@ -91,18 +91,18 @@ const Category = () => {
 }
 
 const styles = StyleSheet.create({
-  container: {
+  list: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    marginTop: 13
+    marginTop: 14
   },
   item: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    marginRight: 18
+    marginRight: 19
   },
   firstItem: {
     marginLeft: 17
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     height: 46
   },
   itemText: {
-    marginTop: 2,
+    marginTop: 3,
     color: '#333',
     fontSize: 12
   }
