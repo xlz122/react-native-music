@@ -67,7 +67,6 @@ function Banner() {
 const styles = StyleSheet.create({
   banner: {
     position: 'relative',
-    flex: 1,
     height: 150
   },
   coverContainer: {
@@ -77,7 +76,8 @@ const styles = StyleSheet.create({
   cover: {
     width: '100%',
     height: '100%',
-    borderRadius: 8
+    borderRadius: 8,
+    overflow: 'hidden'
   }
 });
 

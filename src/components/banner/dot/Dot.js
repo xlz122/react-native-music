@@ -90,9 +90,8 @@ const styles = StyleSheet.create({
     height: 3,
     marginLeft: 2,
     marginRight: 2,
-    backgroundColor: '#fff',
-    borderRadius: 10,
-    opacity: 0.5
+    backgroundColor: 'rgba(255, 255, 255, 0.4)',
+    borderRadius: 10
   }
 });
 
