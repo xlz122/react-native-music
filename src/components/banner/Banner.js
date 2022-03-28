@@ -1,23 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { View, Image, StyleSheet, TouchableOpacity, Dimensions } from 'react-native';
-import Animated, {
-  Extrapolate,
-  interpolate,
-  useAnimatedStyle,
-  useSharedValue,
-} from 'react-native-reanimated';
+import { useSharedValue } from 'react-native-reanimated';
 import Carousel from 'react-native-reanimated-carousel';
 import { bannerImg } from '../../api/find';
+import Dot from './dot/Dot';
 
 // 获取屏幕宽度
 const pageWidth = Dimensions.get('window').width;
 
 function Banner() {
   const [banner, setBanner] = useState({
-    list: [],
-    index: 0
+    list: []
   });
 
+  // 轮播滚动值
   const progressValue = useSharedValue(0);
 
   useEffect(() => {
@@ -46,55 +42,6 @@ function Banner() {
     )
   };
 
-  const PaginationItem = (props) => {
-    const { animValue, index, length } = props;
-    const width = 10;
-
-    const animStyle = useAnimatedStyle(() => {
-      let inputRange = [index - 1, index, index + 1];
-      let outputRange = [-width, 0, width];
-
-      if (index === 0 && animValue?.value > length - 1) {
-        inputRange = [length - 1, length, length + 1];
-        outputRange = [-width, 0, width];
-      }
-
-      return {
-        transform: [
-          {
-            translateX: interpolate(
-              animValue?.value,
-              inputRange,
-              outputRange,
-              Extrapolate.CLAMP,
-            ),
-          },
-        ],
-        backgroundColor: '#fff'
-      };
-    }, [animValue, index, length]);
-
-    return (
-      <View
-        style={[{
-          overflow: 'hidden',
-          transform: [
-            {
-              rotateZ: '0deg'
-            }
-          ],
-        }, styles.bannerDot]}
-      >
-        <Animated.View
-          style={[
-            { flex: 1 },
-            animStyle,
-          ]}
-        />
-      </View>
-    );
-  };
-
   return (
     <View style={styles.banner}>
       <Carousel
@@ -109,18 +56,10 @@ function Banner() {
           (progressValue.value = absoluteProgress)
         }
       />
-      <View style={styles.bannerDotContainer}>
-        {banner.list && banner.list.map((item, index) => {
-          return (
-            <PaginationItem
-              animValue={progressValue}
-              index={index}
-              key={index}
-              length={banner.list.length}
-            />
-          );
-        })}
-      </View>
+      <Dot
+        list={banner.list}
+        progressValue={progressValue}
+      />
     </View>
   );
 }
@@ -139,24 +78,6 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     borderRadius: 8
-  },
-  bannerDotContainer: {
-    position: 'absolute',
-    top: 140,
-    right: 0,
-    bottom: 0,
-    left: 0,
-    justifyContent: 'center',
-    flexDirection: 'row'
-  },
-  bannerDot: {
-    width: 9,
-    height: 3,
-    marginLeft: 2,
-    marginRight: 2,
-    backgroundColor: '#fff',
-    borderRadius: 10,
-    opacity: 0.5
   }
 });
 
