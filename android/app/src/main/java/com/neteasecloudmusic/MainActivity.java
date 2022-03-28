@@ -1,4 +1,4 @@
-package com.NeteaseCloudMusic;
+package com.neteasecloudmusic;
 
 import com.facebook.react.ReactActivity;
 
