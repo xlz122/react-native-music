@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Image, StyleSheet, TouchableOpacity, Dimensions } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity, Dimensions } from 'react-native';
 import { useSharedValue } from 'react-native-reanimated';
 import Carousel from 'react-native-reanimated-carousel';
 import { bannerImg } from '../../api/find';
@@ -34,11 +34,25 @@ function Banner() {
     return (
       <TouchableOpacity activeOpacity={1} >
         <View style={styles.coverContainer}>
-          <Image
-            style={styles.cover}
-            source={{ uri: item.pic }}
-            resizeMode={'stretch'}
-          />
+          <View style={styles.cover}>
+            <Image
+              style={styles.coverImage}
+              source={{ uri: item.pic }}
+              resizeMode={'stretch'}
+            />
+            <View
+              style={[
+                styles.coverTitle,
+                item.titleColor === 'blue'
+                  ? styles.coverTitleBlue
+                  : styles.coverTitle
+              ]}
+            >
+              <Text style={styles.coverTitleText}>
+                {item.typeTitle}
+              </Text>
+            </View>
+          </View>
         </View>
       </TouchableOpacity>
     )
@@ -76,10 +90,31 @@ const styles = StyleSheet.create({
     paddingRight: 16
   },
   cover: {
-    width: '100%',
-    height: '100%',
+    position: 'relative',
     borderRadius: 8,
     overflow: 'hidden'
+  },
+  coverImage: {
+    width: '100%',
+    height: '100%'
+  },
+  coverTitle: {
+    position: 'absolute',
+    right: 0,
+    bottom: 0,
+    paddingTop: 2,
+    paddingBottom: 2,
+    paddingLeft: 6,
+    paddingRight: 7,
+    backgroundColor: '#ec3d44',
+    borderTopLeftRadius: 8
+  },
+  coverTitleText: {
+    color: '#fff',
+    fontSize: 12
+  },
+  coverTitleBlue: {
+    backgroundColor: '#3488c8'
   }
 });
 
