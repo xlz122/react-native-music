@@ -9,6 +9,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 import { recommendSongList } from '../../../api/find';
+import { bigNumberTransform } from '../../../utils/utils';
 
 function SongSheet() {
   const [list, setList] = useState([]);
@@ -35,11 +36,23 @@ function SongSheet() {
           index === 0 ? styles.firstItem : styles.item
         ]
       }>
-        <Image
-          style={[styles.itemImage]}
-          source={{ uri: item.picUrl }}
-          resizeMode={'stretch'}
-        />
+        <View style={styles.itemCover}>
+          <Image
+            style={[styles.coverImage]}
+            source={{ uri: item.picUrl }}
+            resizeMode={'stretch'}
+          />
+          <View style={styles.coverTitle}>
+            <Image
+              style={[styles.playImage]}
+              source={require('../../../assets/image/icon-play.png')}
+              resizeMode={'stretch'}
+            />
+            <Text style={styles.coverTitleText}>
+              {bigNumberTransform(item.playCount)}
+            </Text>
+          </View>
+        </View>
         <Text
           style={styles.itemText}
           numberOfLines={2}
@@ -131,10 +144,40 @@ const styles = StyleSheet.create({
   firstItem: {
     marginLeft: 17
   },
-  itemImage: {
+  itemCover: {
+    position: 'relative',
     width: 105,
     height: 105,
+    overflow: 'hidden'
+  },
+  coverImage: {
+    width: '100%',
+    height: '100%',
     borderRadius: 28
+  },
+  coverTitle: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'absolute',
+    top: 3,
+    right: 3,
+    paddingTop: 1,
+    paddingBottom: 1,
+    paddingLeft: 4,
+    paddingRight: 4,
+    backgroundColor: 'rgba(0, 0, 0, 0.2)',
+    borderRadius: 8
+  },
+  playImage: {
+    width: 10,
+    height: 10
+  },
+  coverTitleText: {
+    marginLeft: 1,
+    color: '#fff',
+    fontSize: 11
   },
   itemText: {
     marginTop: 2,
