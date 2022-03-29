@@ -59,8 +59,8 @@ const styles = StyleSheet.create({
     borderRadius: 15
   },
   searchIcon: {
-    width: 18,
-    height: 18,
+    width: 15,
+    height: 15,
     marginLeft: 15
   },
   searchText: {

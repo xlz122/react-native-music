@@ -28,7 +28,7 @@ const DATA = [
   {
     id: '3ad53abb',
     title: '排行榜',
-    icon: require('../../../assets/image/find/icon-song-sheet.png')
+    icon: require('../../../assets/image/find/icon-toplist.png')
   },
   {
     id: 'fbd91aa9',
