@@ -78,7 +78,7 @@ function Dot(props) {
 const styles = StyleSheet.create({
   dotContainer: {
     position: 'absolute',
-    top: 140,
+    top: 120,
     right: 0,
     bottom: 0,
     left: 0,
