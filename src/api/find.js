@@ -17,6 +17,21 @@ export const bannerImg = () => {
   });
 };
 
+/**
+ * @description 获取发现 - 圆形图标入口列表
+ * @param { Number } timestamp - 防止接口缓存
+ */
+export const dragonBall = () => {
+  const params = {
+    timestamp: new Date().getTime()
+  };
+  return axios.request({
+    url: '/homepage/dragon/ball',
+    method: 'get',
+    params
+  });
+};
+
 /* @description 获取推荐歌单
  * @param { Number } timestamp - 防止接口缓存
  * @param { Number } limit - 条数，可选
