@@ -6,8 +6,10 @@
 
 ## 环境
 
+* Nodejs 14+
+* Java Jdk 11+
 * React 17.0.2
-* React Native 0.67.4
+* React Native 0.68.0
 
 ## 简介
 
@@ -32,7 +34,9 @@
 ## 插件介绍
 
 状态管理
-* redux redux-thunk react-redux
+* redux
+* redux-thunk
+* react-redux
 
 本地存储
 * @react-native-async-storage/async-storage
