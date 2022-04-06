@@ -8,6 +8,7 @@
 
 * Nodejs 14+
 * Java Jdk 11+
+* Android Sdk 31+
 * React 17.0.2
 * React Native 0.68.0
 
