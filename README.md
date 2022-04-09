@@ -36,7 +36,7 @@
 
 本项目使用到的技术栈如下：
 * React
-* React Native
+* React Native 0.68.0
 * Redux
 
 ## 插件介绍
