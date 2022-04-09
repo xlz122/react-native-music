@@ -4,13 +4,20 @@
 
 请联系QQ``122874722``。
 
-## 环境
+## 环境要求
 
-* Nodejs 14+
-* Java Jdk 11+
-* Android Sdk 31+
-* React 17.0.2
-* React Native 0.68.0
+需要 NodeJS 14.0.0+ 环境
+
+![](./src/assets/design-sketch/npm-6.14.4.svg)
+![](./src/assets/design-sketch/node-14.0.0.svg)
+
+需要 Java JDK 11+ 环境
+
+![](./src/assets/design-sketch/java-jdk-11.0.0.svg)
+
+需要 Android SDK 31+ 环境
+
+![](./src/assets/design-sketch/android-sdk-31.0.0.svg)
 
 ## 简介
 
