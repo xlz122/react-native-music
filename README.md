@@ -1,8 +1,6 @@
 # 网易云音乐
 
-**特别声明：本项目中的展示图片归网易云所有。如果侵权，请联系删除。**
-
-请联系QQ``122874722``。
+**特别声明：本项目中的展示图片归网易云所有。如果侵权，请提交 Issues 联系。**
 
 ## 环境要求
 
@@ -23,20 +21,17 @@
 
 本项目是一个仿写网易云APP端项目。
 
-后端接口部分使用 Binaryify 的 NodeJS 版 API项目。
+后端接口部分使用 Binaryify 的 NodeJS 版 Api项目。
 
-项目使用线上地址，如果线上地址不可用，需将网易云API项目下载到本地，并安装依赖运行，
-更改 .env.development 文件中的代理地址，更改为API项目ip地址。
+Api项目github地址: [https://github.com/Binaryify/NeteaseCloudMusicApi](https://github.com/Binaryify/NeteaseCloudMusicApi)。
 
-网易云API项目github地址: [https://github.com/Binaryify/NeteaseCloudMusicApi](https://github.com/Binaryify/NeteaseCloudMusicApi)。
-
-网易云API接口文档地址: [https://binaryify.github.io/NeteaseCloudMusicApi/#/](https://binaryify.github.io/NeteaseCloudMusicApi/#/)。
+Api接口文档地址: [https://binaryify.github.io/NeteaseCloudMusicApi/#/](https://binaryify.github.io/NeteaseCloudMusicApi/#/)。
 
 ## 项目使用技术栈
 
 本项目使用到的技术栈如下：
 * React
-* React Native 0.68.0
+* React Native 0.68.1
 * Redux
 
 ## 插件介绍
