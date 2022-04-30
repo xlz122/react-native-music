@@ -90,7 +90,7 @@ yarn react-native run-android
 
 |发现|播客|我的|关注|云村|
 |---|---|---|---|---|
-|![](./src/assets/design-sketch/find.jpg)|![]()|![]()|![]()|![]()|
+|![](./src/assets/design-sketch/find.jpg)|![](./src/assets/design-sketch/bolg.jpg)|![](./src/assets/design-sketch/mine.jpg)|![](./src/assets/design-sketch/follow.jpg)|![](./src/assets/design-sketch/yuncun.jpg)|
 
 ## 写在最后
 
