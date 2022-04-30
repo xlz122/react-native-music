@@ -86,6 +86,12 @@ yarn react-native run-android
 
 安卓手机教程: [https://blog.csdn.net/weixin_43233914/article/details/119568245](https://blog.csdn.net/weixin_43233914/article/details/119568245)。
 
+### 项目效果图
+
+|发现|播客|我的|关注|云村|
+|---|---|---|---|---|
+|![](./src/assets/design-sketch/find.jpg)|![]()|![]()|![]()|![]()|
+
 ## 写在最后
 
 * 本项目仅用于学习使用，切勿用于商业用途，否则产生的法律后果与作者无关。
