@@ -12,7 +12,7 @@ function Find() {
       <View style={[styles.group]}>
         <LinearGradinet colors={['#ececee', '#f7f7f7', '#fff']}>
           <SearchHeader />
-          {/* <Banner /> */}
+          <Banner />
           <Category />
         </LinearGradinet>
         <View style={styles.line}></View>
