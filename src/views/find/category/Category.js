@@ -57,7 +57,7 @@ const DATA = [
   }
 ];
 
-const Category = () => {
+function Category() {
   const renderItem = ({ item, index }) => (
     <TouchableOpacity activeOpacity={1}>
       <View style={
