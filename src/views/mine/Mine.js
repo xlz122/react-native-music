@@ -1,9 +1,13 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import SearchHeader from './search-header/SearchHeader';
 import Category from './category/Category';
 
-function Mine() {
+function Mine(props) {
+  const jumpLogin = () => {
+    props.navigation.navigate('Login');
+  };
+
   return (
     <View style={styles.mine}>
       <SearchHeader />
@@ -14,14 +18,14 @@ function Mine() {
             source={require('../../assets/image/mine/icon-avatar.png')}
             resizeMode={'stretch'}
           />
-          <View style={styles.notLoginTitle}>
+          <TouchableOpacity onPress={jumpLogin} style={styles.notLoginTitle}>
             <Text style={styles.notLoginText}>立即登录</Text>
             <Image
               style={styles.notLoginIcon}
               source={require('../../assets/image/mine/icon-arrow.png')}
               resizeMode={'stretch'}
             />
-          </View>
+          </TouchableOpacity>
         </View>
       </View>
       <View style={[styles.group]}>

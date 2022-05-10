@@ -67,7 +67,7 @@ const DATA = [
 
 function Category() {
   const renderItem = (item, index) => (
-    <TouchableOpacity activeOpacity={1}>
+    <TouchableOpacity activeOpacity={1} key={index}>
       <View style={
         [
           styles.item,
