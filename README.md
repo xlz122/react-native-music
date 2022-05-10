@@ -30,7 +30,7 @@ Api接口文档地址: [https://binaryify.github.io/NeteaseCloudMusicApi/#/](htt
 ## 项目使用技术栈
 
 * React
-* React Native 0.68.1
+* React Native 0.68.2
 * Redux
 
 ## 插件介绍
