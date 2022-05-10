@@ -1,4 +1,27 @@
-## 0.0.1 (2022-03-31)
+## [0.0.2](https://github.com/xlz122/react-native-music/compare/v0.0.1...v0.0.2) (2022-05-10)
+
+
+### ✨ Features | 新功能
+
+* 完成我的个人信息（未登录）、分类静态页面 [#4dd185e](https://github.com/xlz122/react-native-music/commit/4dd185e) 
+
+
+### 🎫 Chores | 其他更新
+
+* 更新效果图 [#a4ab275](https://github.com/xlz122/react-native-music/commit/a4ab275) 
+* 升级部分依赖项 [#285deb9](https://github.com/xlz122/react-native-music/commit/285deb9) 
+* 添加一些版本要求图标 [#d497625](https://github.com/xlz122/react-native-music/commit/d497625) 
+* modify changelog config [#42eb9d6](https://github.com/xlz122/react-native-music/commit/42eb9d6) 
+* react native版本更新至0.68.1，注释轮播图部分(插件存在bug) [#4ec1a65](https://github.com/xlz122/react-native-music/commit/4ec1a65) 
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* 修复轮播图插件bug(暂时使用，待插件修复) [#433669f](https://github.com/xlz122/react-native-music/commit/433669f) 
+
+
+
+## [0.0.1](https://github.com/xlz122/react-native-music/compare/21e41d9...v0.0.1) (2022-03-31)
 
 
 ### ⚡ Performance Improvements | 性能优化
