@@ -11,25 +11,48 @@ function Mine(props) {
   return (
     <View style={styles.mine}>
       <SearchHeader />
-      <View style={[styles.group, styles.notLoginGroup]}>
+      <TouchableOpacity
+        onPress={jumpLogin}
+        style={[styles.group, styles.notLoginGroup]}
+      >
         <View style={styles.notLogin}>
           <Image
             style={styles.notLoginAvatar}
             source={require('../../assets/image/mine/icon-avatar.png')}
             resizeMode={'stretch'}
           />
-          <TouchableOpacity onPress={jumpLogin} style={styles.notLoginTitle}>
+          <View style={styles.notLoginTitle}>
             <Text style={styles.notLoginText}>立即登录</Text>
             <Image
               style={styles.notLoginIcon}
               source={require('../../assets/image/mine/icon-arrow.png')}
               resizeMode={'stretch'}
             />
-          </TouchableOpacity>
+          </View>
         </View>
-      </View>
+      </TouchableOpacity>
       <View style={[styles.group]}>
         <Category />
+        <View style={styles.line}></View>
+      </View>
+      <View style={[styles.group, styles.linkMusic]}>
+        <Image
+          style={styles.likeMusicIcon}
+          source={require('../../assets/image/mine/icon-link-music-default.png')}
+          resizeMode={'stretch'}
+        />
+        <View style={styles.linkMusicTitle}>
+          <Text style={styles.linkMusicTitleText}>我喜欢的音乐</Text>
+          <Text style={styles.linkMusicTitleNum}>0首</Text>
+        </View>
+        <View style={styles.linkMusicXinDong}>
+          <Image
+            style={styles.linkMusicXinDongIcon}
+            source={require('../../assets/image/mine/icon-xindong.png')}
+            resizeMode={'stretch'}
+          />
+          <Text style={styles.linkMusicXinDongText}>心动模式</Text>
+        </View>
       </View>
     </View>
   );
@@ -50,9 +73,9 @@ const styles = StyleSheet.create({
     borderRadius: 12
   },
   line: {
-    height: 0.3,
+    height: 0.18,
     marginTop: 13,
-    backgroundColor: '#cfcfcf'
+    backgroundColor: '#eee'
   },
   notLoginGroup: {
     marginTop: 39
@@ -90,6 +113,55 @@ const styles = StyleSheet.create({
     height: 12,
     marginTop: 3,
     marginLeft: 2
+  },
+  linkMusic: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    height: 83,
+    paddingTop: 10,
+    marginTop: 30.5
+  },
+  likeMusicIcon: {
+    width: 50,
+    height: 50,
+    marginLeft: 15
+  },
+  linkMusicTitle: {
+    flex: 1,
+    marginLeft: 10
+  },
+  linkMusicTitleText: {
+    color: '#333',
+    fontSize: 15
+  },
+  linkMusicTitleNum: {
+    color: '#ccc',
+    fontSize: 11.5
+  },
+  linkMusicXinDong: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingTop: 3,
+    paddingBottom: 3,
+    paddingLeft: 7.2,
+    paddingRight: 7.2,
+    marginRight: 15,
+    borderColor: '#e2e2e2',
+    borderWidth: 0.6,
+    borderRadius: 12
+  },
+  linkMusicXinDongIcon: {
+    width: 16,
+    height: 16
+  },
+  linkMusicXinDongText: {
+    marginLeft: 2,
+    color: '#333',
+    fontSize: 11
   }
 });
 
