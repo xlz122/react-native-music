@@ -1,7 +1,10 @@
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import reducer from './reducer';
+import { configureStore } from '@reduxjs/toolkit';
+import routineSlice from './routineSlice';
 
-const store = createStore(reducer, applyMiddleware(thunk));
+const store = configureStore({
+  reducer: {
+    routine: routineSlice
+  }
+});
 
 export default store;
