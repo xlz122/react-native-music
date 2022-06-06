@@ -36,8 +36,7 @@ Api接口文档地址: [https://binaryify.github.io/NeteaseCloudMusicApi/#/](htt
 ## 插件介绍
 
 状态管理
-* redux
-* redux-thunk
+* @reduxjs/toolkit
 * react-redux
 
 本地存储
