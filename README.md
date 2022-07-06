@@ -30,7 +30,7 @@ Api接口文档地址: [https://binaryify.github.io/NeteaseCloudMusicApi/#/](htt
 ## 项目使用技术栈
 
 * React
-* React Native 0.68.2
+* React Native 0.69.0
 * Redux
 
 ## 插件介绍
@@ -59,6 +59,19 @@ tab导航
 
 渐变背景色
 * react-native-linear-gradient
+
+不兼容插件(暂时移除)
+* react-native-reanimated
+* react-native-reanimated-carousel
+* react-native-screens
+
+babel.config.js
+
+```
+  plugins: [
+    'react-native-reanimated/plugin',
+  ],
+```
 
 ## 加入项目
 
